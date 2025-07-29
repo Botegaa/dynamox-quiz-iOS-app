@@ -1,0 +1,33 @@
+# Xcode
+*.xcworkspace
+*.xcuserstate
+*.xccheckout
+*.xcodeproj/project.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+DerivedData/
+build/
+.DS_Store
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# SwiftPM (caso use)
+.swiftpm/
+.build/
+
+# Realm (se usar)
+*.realm
+*.realm.lock
+*.realm.management/
+
+# Logs e temporários
+*.log
+
+# Xcode project user settings
+xcuserdata/
+
+# Outros
+.idea/
+*.swp
+*.swo
