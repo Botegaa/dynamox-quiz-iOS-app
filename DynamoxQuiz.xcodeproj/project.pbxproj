@@ -16,6 +16,11 @@
 		3630F64D2E32ACC4006D9E21 /* DynamoxQuizUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3630F64C2E32ACC4006D9E21 /* DynamoxQuizUITestsLaunchTests.swift */; };
 		3630F65A2E32AE4D006D9E21 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3630F6592E32AE4D006D9E21 /* HomeVC.swift */; };
 		3630F6692E384C58006D9E21 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 3630F6682E384C58006D9E21 /* .gitignore */; };
+		3630F66B2E385405006D9E21 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3630F66A2E385405006D9E21 /* HomeScreen.swift */; };
+		3630F66E2E385421006D9E21 /* QuizScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3630F66D2E385421006D9E21 /* QuizScreen.swift */; };
+		3630F6702E385444006D9E21 /* QuizVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3630F66F2E385444006D9E21 /* QuizVC.swift */; };
+		3630F6732E3854E3006D9E21 /* ResultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3630F6722E3854E3006D9E21 /* ResultVC.swift */; };
+		3630F6752E3854F6006D9E21 /* ResultScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3630F6742E3854F6006D9E21 /* ResultScreen.swift */; };
 		5EB1CD4462FAEB71F03E27CB /* Pods_DynamoxQuiz_DynamoxQuizUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D847F08A5F93197C847CB6AB /* Pods_DynamoxQuiz_DynamoxQuizUITests.framework */; };
 		9027AC1387F9A623D1819CA7 /* Pods_DynamoxQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59F1DB502C5789E695542884 /* Pods_DynamoxQuiz.framework */; };
 		CA6689621AB5394AFDD98E8B /* Pods_DynamoxQuizTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A85FF38020BCA462B7BE449E /* Pods_DynamoxQuizTests.framework */; };
@@ -54,6 +59,11 @@
 		3630F64C2E32ACC4006D9E21 /* DynamoxQuizUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamoxQuizUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3630F6592E32AE4D006D9E21 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		3630F6682E384C58006D9E21 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		3630F66A2E385405006D9E21 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		3630F66D2E385421006D9E21 /* QuizScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizScreen.swift; sourceTree = "<group>"; };
+		3630F66F2E385444006D9E21 /* QuizVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizVC.swift; sourceTree = "<group>"; };
+		3630F6722E3854E3006D9E21 /* ResultVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultVC.swift; sourceTree = "<group>"; };
+		3630F6742E3854F6006D9E21 /* ResultScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultScreen.swift; sourceTree = "<group>"; };
 		454A6A62E66981EC7FBD1CDF /* Pods-DynamoxQuiz-DynamoxQuizUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DynamoxQuiz-DynamoxQuizUITests.release.xcconfig"; path = "Target Support Files/Pods-DynamoxQuiz-DynamoxQuizUITests/Pods-DynamoxQuiz-DynamoxQuizUITests.release.xcconfig"; sourceTree = "<group>"; };
 		59F1DB502C5789E695542884 /* Pods_DynamoxQuiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DynamoxQuiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		80FAEF831F3E826A636041F5 /* Pods-DynamoxQuizTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DynamoxQuizTests.release.xcconfig"; path = "Target Support Files/Pods-DynamoxQuizTests/Pods-DynamoxQuizTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -149,6 +159,8 @@
 		3630F6602E32B563006D9E21 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3630F6712E3854CF006D9E21 /* Result */,
+				3630F66C2E38540C006D9E21 /* Quiz */,
 				3630F6642E32B5BB006D9E21 /* Home */,
 			);
 			path = View;
@@ -180,8 +192,27 @@
 			isa = PBXGroup;
 			children = (
 				3630F6592E32AE4D006D9E21 /* HomeVC.swift */,
+				3630F66A2E385405006D9E21 /* HomeScreen.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		3630F66C2E38540C006D9E21 /* Quiz */ = {
+			isa = PBXGroup;
+			children = (
+				3630F66D2E385421006D9E21 /* QuizScreen.swift */,
+				3630F66F2E385444006D9E21 /* QuizVC.swift */,
+			);
+			path = Quiz;
+			sourceTree = "<group>";
+		};
+		3630F6712E3854CF006D9E21 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				3630F6722E3854E3006D9E21 /* ResultVC.swift */,
+				3630F6742E3854F6006D9E21 /* ResultScreen.swift */,
+			);
+			path = Result;
 			sourceTree = "<group>";
 		};
 		373FF59ABF195C78C9E19006 /* Pods */ = {
@@ -411,6 +442,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3630F65A2E32AE4D006D9E21 /* HomeVC.swift in Sources */,
+				3630F6702E385444006D9E21 /* QuizVC.swift in Sources */,
+				3630F66B2E385405006D9E21 /* HomeScreen.swift in Sources */,
+				3630F66E2E385421006D9E21 /* QuizScreen.swift in Sources */,
+				3630F6732E3854E3006D9E21 /* ResultVC.swift in Sources */,
+				3630F6752E3854F6006D9E21 /* ResultScreen.swift in Sources */,
 				3630F62A2E32ACC0006D9E21 /* AppDelegate.swift in Sources */,
 				3630F62C2E32ACC0006D9E21 /* SceneDelegate.swift in Sources */,
 			);
