@@ -23,6 +23,7 @@
 		3630F6752E3854F6006D9E21 /* ResultScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3630F6742E3854F6006D9E21 /* ResultScreen.swift */; };
 		3630F6782E3AA32E006D9E21 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3630F6772E3AA32E006D9E21 /* Question.swift */; };
 		3630F67A2E3AA348006D9E21 /* AnswerResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3630F6792E3AA348006D9E21 /* AnswerResult.swift */; };
+		3630F6802E3AB01E006D9E21 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3630F67F2E3AB01E006D9E21 /* APIService.swift */; };
 		5EB1CD4462FAEB71F03E27CB /* Pods_DynamoxQuiz_DynamoxQuizUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D847F08A5F93197C847CB6AB /* Pods_DynamoxQuiz_DynamoxQuizUITests.framework */; };
 		9027AC1387F9A623D1819CA7 /* Pods_DynamoxQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59F1DB502C5789E695542884 /* Pods_DynamoxQuiz.framework */; };
 		CA6689621AB5394AFDD98E8B /* Pods_DynamoxQuizTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A85FF38020BCA462B7BE449E /* Pods_DynamoxQuizTests.framework */; };
@@ -68,6 +69,7 @@
 		3630F6742E3854F6006D9E21 /* ResultScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultScreen.swift; sourceTree = "<group>"; };
 		3630F6772E3AA32E006D9E21 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		3630F6792E3AA348006D9E21 /* AnswerResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerResult.swift; sourceTree = "<group>"; };
+		3630F67F2E3AB01E006D9E21 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		454A6A62E66981EC7FBD1CDF /* Pods-DynamoxQuiz-DynamoxQuizUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DynamoxQuiz-DynamoxQuizUITests.release.xcconfig"; path = "Target Support Files/Pods-DynamoxQuiz-DynamoxQuizUITests/Pods-DynamoxQuiz-DynamoxQuizUITests.release.xcconfig"; sourceTree = "<group>"; };
 		59F1DB502C5789E695542884 /* Pods_DynamoxQuiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DynamoxQuiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		80FAEF831F3E826A636041F5 /* Pods-DynamoxQuizTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DynamoxQuizTests.release.xcconfig"; path = "Target Support Files/Pods-DynamoxQuizTests/Pods-DynamoxQuizTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -132,8 +134,8 @@
 			isa = PBXGroup;
 			children = (
 				3630F6762E3AA27E006D9E21 /* Models */,
-				3630F6602E32B563006D9E21 /* View */,
-				3630F6612E32B566006D9E21 /* ViewModel */,
+				3630F6602E32B563006D9E21 /* Views */,
+				3630F6612E32B566006D9E21 /* ViewModels */,
 				3630F6622E32B569006D9E21 /* Services */,
 				3630F6632E32B56C006D9E21 /* Resources */,
 				3630F6292E32ACC0006D9E21 /* AppDelegate.swift */,
@@ -161,26 +163,27 @@
 			path = DynamoxQuizUITests;
 			sourceTree = "<group>";
 		};
-		3630F6602E32B563006D9E21 /* View */ = {
+		3630F6602E32B563006D9E21 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				3630F6712E3854CF006D9E21 /* Result */,
 				3630F66C2E38540C006D9E21 /* Quiz */,
 				3630F6642E32B5BB006D9E21 /* Home */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		3630F6612E32B566006D9E21 /* ViewModel */ = {
+		3630F6612E32B566006D9E21 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = ViewModel;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		3630F6622E32B569006D9E21 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				3630F67F2E3AB01E006D9E21 /* APIService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -459,6 +462,7 @@
 				3630F6702E385444006D9E21 /* QuizVC.swift in Sources */,
 				3630F67A2E3AA348006D9E21 /* AnswerResult.swift in Sources */,
 				3630F66B2E385405006D9E21 /* HomeScreen.swift in Sources */,
+				3630F6802E3AB01E006D9E21 /* APIService.swift in Sources */,
 				3630F6782E3AA32E006D9E21 /* Question.swift in Sources */,
 				3630F66E2E385421006D9E21 /* QuizScreen.swift in Sources */,
 				3630F6732E3854E3006D9E21 /* ResultVC.swift in Sources */,
