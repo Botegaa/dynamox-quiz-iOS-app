@@ -14,7 +14,7 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         homeScreen = HomeScreen()
-        view = HomeScreen
+        view = homeScreen
     }
     
 

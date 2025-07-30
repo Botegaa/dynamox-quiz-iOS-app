@@ -266,6 +266,7 @@
 				3630F6222E32ACC0006D9E21 /* Sources */,
 				3630F6232E32ACC0006D9E21 /* Frameworks */,
 				3630F6242E32ACC0006D9E21 /* Resources */,
+				BB75FFBB52E8877F0F6E34F8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -303,6 +304,7 @@
 				3630F6422E32ACC4006D9E21 /* Sources */,
 				3630F6432E32ACC4006D9E21 /* Frameworks */,
 				3630F6442E32ACC4006D9E21 /* Resources */,
+				2A4442488C5D33828524324D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -385,6 +387,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2A4442488C5D33828524324D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DynamoxQuiz-DynamoxQuizUITests/Pods-DynamoxQuiz-DynamoxQuizUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DynamoxQuiz-DynamoxQuizUITests/Pods-DynamoxQuiz-DynamoxQuizUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DynamoxQuiz-DynamoxQuizUITests/Pods-DynamoxQuiz-DynamoxQuizUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		68AAE73BA8015C8E7D3F7800 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -427,6 +446,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB75FFBB52E8877F0F6E34F8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DynamoxQuiz/Pods-DynamoxQuiz-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DynamoxQuiz/Pods-DynamoxQuiz-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DynamoxQuiz/Pods-DynamoxQuiz-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DB96D2D72E4F11BE84ADB6F3 /* [CP] Check Pods Manifest.lock */ = {
