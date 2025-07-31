@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 var homeScreen : HomeScreen?
 
 class HomeVC: UIViewController {
@@ -15,7 +16,16 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         homeScreen = HomeScreen()
         view = homeScreen
+        
+        for family in UIFont.familyNames {
+            print("📦 Family: \(family)")
+            for name in UIFont.fontNames(forFamilyName: family) {
+                print("  🔤 Font: \(name)")
+            }
+        }
     }
+    
     
 
 }
+ 

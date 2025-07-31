@@ -25,9 +25,9 @@
 		3630F67A2E3AA348006D9E21 /* AnswerResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3630F6792E3AA348006D9E21 /* AnswerResult.swift */; };
 		3630F6802E3AB01E006D9E21 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3630F67F2E3AB01E006D9E21 /* APIService.swift */; };
 		3630F6832E3B34C7006D9E21 /* ThemeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3630F6822E3B34C7006D9E21 /* ThemeColors.swift */; };
-		5EB1CD4462FAEB71F03E27CB /* Pods_DynamoxQuiz_DynamoxQuizUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D847F08A5F93197C847CB6AB /* Pods_DynamoxQuiz_DynamoxQuizUITests.framework */; };
-		9027AC1387F9A623D1819CA7 /* Pods_DynamoxQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59F1DB502C5789E695542884 /* Pods_DynamoxQuiz.framework */; };
-		CA6689621AB5394AFDD98E8B /* Pods_DynamoxQuizTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A85FF38020BCA462B7BE449E /* Pods_DynamoxQuizTests.framework */; };
+		365CA75A2E3BFA5D002F4F30 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 365CA7592E3BFA5D002F4F30 /* Poppins-SemiBold.ttf */; };
+		365CA75C2E3BFA6C002F4F30 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 365CA75B2E3BFA6C002F4F30 /* Poppins-Bold.ttf */; };
+		EE6F0B54D873D8F0A08AA24D /* Pods_DynamoxQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E8E84027464C2E7DACC527A /* Pods_DynamoxQuiz.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,8 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1B3DE4FA5D7487CDFC6F4449 /* Pods-DynamoxQuizTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DynamoxQuizTests.debug.xcconfig"; path = "Target Support Files/Pods-DynamoxQuizTests/Pods-DynamoxQuizTests.debug.xcconfig"; sourceTree = "<group>"; };
-		35FD4396B9E383A1D2F63E21 /* Pods-DynamoxQuiz-DynamoxQuizUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DynamoxQuiz-DynamoxQuizUITests.debug.xcconfig"; path = "Target Support Files/Pods-DynamoxQuiz-DynamoxQuizUITests/Pods-DynamoxQuiz-DynamoxQuizUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1D51BE3829ED0BFC8BBA34EB /* Pods-DynamoxQuiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DynamoxQuiz.release.xcconfig"; path = "Target Support Files/Pods-DynamoxQuiz/Pods-DynamoxQuiz.release.xcconfig"; sourceTree = "<group>"; };
 		3630F6262E32ACC0006D9E21 /* DynamoxQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamoxQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3630F6292E32ACC0006D9E21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3630F62B2E32ACC0006D9E21 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,13 +71,13 @@
 		3630F6792E3AA348006D9E21 /* AnswerResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerResult.swift; sourceTree = "<group>"; };
 		3630F67F2E3AB01E006D9E21 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		3630F6822E3B34C7006D9E21 /* ThemeColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColors.swift; sourceTree = "<group>"; };
-		454A6A62E66981EC7FBD1CDF /* Pods-DynamoxQuiz-DynamoxQuizUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DynamoxQuiz-DynamoxQuizUITests.release.xcconfig"; path = "Target Support Files/Pods-DynamoxQuiz-DynamoxQuizUITests/Pods-DynamoxQuiz-DynamoxQuizUITests.release.xcconfig"; sourceTree = "<group>"; };
-		59F1DB502C5789E695542884 /* Pods_DynamoxQuiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DynamoxQuiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		80FAEF831F3E826A636041F5 /* Pods-DynamoxQuizTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DynamoxQuizTests.release.xcconfig"; path = "Target Support Files/Pods-DynamoxQuizTests/Pods-DynamoxQuizTests.release.xcconfig"; sourceTree = "<group>"; };
-		A85FF38020BCA462B7BE449E /* Pods_DynamoxQuizTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DynamoxQuizTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C1F735731059E45CBE07DDEE /* Pods-DynamoxQuiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DynamoxQuiz.release.xcconfig"; path = "Target Support Files/Pods-DynamoxQuiz/Pods-DynamoxQuiz.release.xcconfig"; sourceTree = "<group>"; };
-		D847F08A5F93197C847CB6AB /* Pods_DynamoxQuiz_DynamoxQuizUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DynamoxQuiz_DynamoxQuizUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FBDE8FFB09CA181C35FE7A96 /* Pods-DynamoxQuiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DynamoxQuiz.debug.xcconfig"; path = "Target Support Files/Pods-DynamoxQuiz/Pods-DynamoxQuiz.debug.xcconfig"; sourceTree = "<group>"; };
+		365CA7502E3B4CDF002F4F30 /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		365CA7532E3B4CE8002F4F30 /* realm-monorepo.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = "realm-monorepo.xcframework"; path = "Pods/Realm/core/realm-monorepo.xcframework"; sourceTree = "<group>"; };
+		365CA7562E3B4CEE002F4F30 /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		365CA7592E3BFA5D002F4F30 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		365CA75B2E3BFA6C002F4F30 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		6E8E84027464C2E7DACC527A /* Pods_DynamoxQuiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DynamoxQuiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFEC786D4D3102E63FA293AB /* Pods-DynamoxQuiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DynamoxQuiz.debug.xcconfig"; path = "Target Support Files/Pods-DynamoxQuiz/Pods-DynamoxQuiz.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9027AC1387F9A623D1819CA7 /* Pods_DynamoxQuiz.framework in Frameworks */,
+				EE6F0B54D873D8F0A08AA24D /* Pods_DynamoxQuiz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,7 +93,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA6689621AB5394AFDD98E8B /* Pods_DynamoxQuizTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,7 +100,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EB1CD4462FAEB71F03E27CB /* Pods_DynamoxQuiz_DynamoxQuizUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,8 +114,8 @@
 				3630F6492E32ACC4006D9E21 /* DynamoxQuizUITests */,
 				3630F6272E32ACC0006D9E21 /* Products */,
 				373FF59ABF195C78C9E19006 /* Pods */,
-				4143626E9C34BC704BCA8A99 /* Frameworks */,
 				3630F6682E384C58006D9E21 /* .gitignore */,
+				3CB3B0F1D99B26C81AD253CB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -194,6 +191,8 @@
 		3630F6632E32B56C006D9E21 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				365CA75B2E3BFA6C002F4F30 /* Poppins-Bold.ttf */,
+				365CA7592E3BFA5D002F4F30 /* Poppins-SemiBold.ttf */,
 				3630F6322E32ACC3006D9E21 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -246,22 +245,19 @@
 		373FF59ABF195C78C9E19006 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				FBDE8FFB09CA181C35FE7A96 /* Pods-DynamoxQuiz.debug.xcconfig */,
-				C1F735731059E45CBE07DDEE /* Pods-DynamoxQuiz.release.xcconfig */,
-				35FD4396B9E383A1D2F63E21 /* Pods-DynamoxQuiz-DynamoxQuizUITests.debug.xcconfig */,
-				454A6A62E66981EC7FBD1CDF /* Pods-DynamoxQuiz-DynamoxQuizUITests.release.xcconfig */,
-				1B3DE4FA5D7487CDFC6F4449 /* Pods-DynamoxQuizTests.debug.xcconfig */,
-				80FAEF831F3E826A636041F5 /* Pods-DynamoxQuizTests.release.xcconfig */,
+				CFEC786D4D3102E63FA293AB /* Pods-DynamoxQuiz.debug.xcconfig */,
+				1D51BE3829ED0BFC8BBA34EB /* Pods-DynamoxQuiz.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		4143626E9C34BC704BCA8A99 /* Frameworks */ = {
+		3CB3B0F1D99B26C81AD253CB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				59F1DB502C5789E695542884 /* Pods_DynamoxQuiz.framework */,
-				D847F08A5F93197C847CB6AB /* Pods_DynamoxQuiz_DynamoxQuizUITests.framework */,
-				A85FF38020BCA462B7BE449E /* Pods_DynamoxQuizTests.framework */,
+				365CA7562E3B4CEE002F4F30 /* RealmSwift.framework */,
+				365CA7532E3B4CE8002F4F30 /* realm-monorepo.xcframework */,
+				365CA7502E3B4CDF002F4F30 /* Realm.framework */,
+				6E8E84027464C2E7DACC527A /* Pods_DynamoxQuiz.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -273,11 +269,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3630F6502E32ACC4006D9E21 /* Build configuration list for PBXNativeTarget "DynamoxQuiz" */;
 			buildPhases = (
-				68AAE73BA8015C8E7D3F7800 /* [CP] Check Pods Manifest.lock */,
+				5FE89F5CCA1963262EA845DC /* [CP] Check Pods Manifest.lock */,
 				3630F6222E32ACC0006D9E21 /* Sources */,
 				3630F6232E32ACC0006D9E21 /* Frameworks */,
 				3630F6242E32ACC0006D9E21 /* Resources */,
-				BB75FFBB52E8877F0F6E34F8 /* [CP] Embed Pods Frameworks */,
+				1583A6E134D7B73A2DC287BB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -292,7 +288,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3630F6532E32ACC4006D9E21 /* Build configuration list for PBXNativeTarget "DynamoxQuizTests" */;
 			buildPhases = (
-				97D86280E3598FCAD06705E3 /* [CP] Check Pods Manifest.lock */,
 				3630F6382E32ACC3006D9E21 /* Sources */,
 				3630F6392E32ACC3006D9E21 /* Frameworks */,
 				3630F63A2E32ACC3006D9E21 /* Resources */,
@@ -311,11 +306,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3630F6562E32ACC4006D9E21 /* Build configuration list for PBXNativeTarget "DynamoxQuizUITests" */;
 			buildPhases = (
-				DB96D2D72E4F11BE84ADB6F3 /* [CP] Check Pods Manifest.lock */,
 				3630F6422E32ACC4006D9E21 /* Sources */,
 				3630F6432E32ACC4006D9E21 /* Frameworks */,
 				3630F6442E32ACC4006D9E21 /* Resources */,
-				2A4442488C5D33828524324D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -376,6 +369,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3630F6362E32ACC3006D9E21 /* LaunchScreen.storyboard in Resources */,
+				365CA75A2E3BFA5D002F4F30 /* Poppins-SemiBold.ttf in Resources */,
+				365CA75C2E3BFA6C002F4F30 /* Poppins-Bold.ttf in Resources */,
 				3630F6692E384C58006D9E21 /* .gitignore in Resources */,
 				3630F6332E32ACC3006D9E21 /* Assets.xcassets in Resources */,
 			);
@@ -398,68 +393,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2A4442488C5D33828524324D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DynamoxQuiz-DynamoxQuizUITests/Pods-DynamoxQuiz-DynamoxQuizUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DynamoxQuiz-DynamoxQuizUITests/Pods-DynamoxQuiz-DynamoxQuizUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DynamoxQuiz-DynamoxQuizUITests/Pods-DynamoxQuiz-DynamoxQuizUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		68AAE73BA8015C8E7D3F7800 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DynamoxQuiz-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		97D86280E3598FCAD06705E3 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DynamoxQuizTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BB75FFBB52E8877F0F6E34F8 /* [CP] Embed Pods Frameworks */ = {
+		1583A6E134D7B73A2DC287BB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -476,7 +410,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DynamoxQuiz/Pods-DynamoxQuiz-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DB96D2D72E4F11BE84ADB6F3 /* [CP] Check Pods Manifest.lock */ = {
+		5FE89F5CCA1963262EA845DC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -491,7 +425,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DynamoxQuiz-DynamoxQuizUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-DynamoxQuiz-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -685,13 +619,14 @@
 		};
 		3630F6512E32ACC4006D9E21 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FBDE8FFB09CA181C35FE7A96 /* Pods-DynamoxQuiz.debug.xcconfig */;
+			baseConfigurationReference = CFEC786D4D3102E63FA293AB /* Pods-DynamoxQuiz.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9VXHB7ZS42;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DynamoxQuiz/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -713,13 +648,14 @@
 		};
 		3630F6522E32ACC4006D9E21 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C1F735731059E45CBE07DDEE /* Pods-DynamoxQuiz.release.xcconfig */;
+			baseConfigurationReference = 1D51BE3829ED0BFC8BBA34EB /* Pods-DynamoxQuiz.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9VXHB7ZS42;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DynamoxQuiz/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -741,7 +677,6 @@
 		};
 		3630F6542E32ACC4006D9E21 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1B3DE4FA5D7487CDFC6F4449 /* Pods-DynamoxQuizTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -762,7 +697,6 @@
 		};
 		3630F6552E32ACC4006D9E21 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 80FAEF831F3E826A636041F5 /* Pods-DynamoxQuizTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -783,7 +717,6 @@
 		};
 		3630F6572E32ACC4006D9E21 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 35FD4396B9E383A1D2F63E21 /* Pods-DynamoxQuiz-DynamoxQuizUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -802,7 +735,6 @@
 		};
 		3630F6582E32ACC4006D9E21 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 454A6A62E66981EC7FBD1CDF /* Pods-DynamoxQuiz-DynamoxQuizUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
