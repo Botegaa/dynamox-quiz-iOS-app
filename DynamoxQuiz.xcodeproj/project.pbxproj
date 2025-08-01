@@ -27,6 +27,7 @@
 		3630F6832E3B34C7006D9E21 /* ThemeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3630F6822E3B34C7006D9E21 /* ThemeColors.swift */; };
 		365CA75A2E3BFA5D002F4F30 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 365CA7592E3BFA5D002F4F30 /* Poppins-SemiBold.ttf */; };
 		365CA75C2E3BFA6C002F4F30 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 365CA75B2E3BFA6C002F4F30 /* Poppins-Bold.ttf */; };
+		365CA75E2E3C050A002F4F30 /* AnswerOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365CA75D2E3C050A002F4F30 /* AnswerOption.swift */; };
 		EE6F0B54D873D8F0A08AA24D /* Pods_DynamoxQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E8E84027464C2E7DACC527A /* Pods_DynamoxQuiz.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +77,7 @@
 		365CA7562E3B4CEE002F4F30 /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		365CA7592E3BFA5D002F4F30 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		365CA75B2E3BFA6C002F4F30 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		365CA75D2E3C050A002F4F30 /* AnswerOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerOption.swift; sourceTree = "<group>"; };
 		6E8E84027464C2E7DACC527A /* Pods_DynamoxQuiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DynamoxQuiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFEC786D4D3102E63FA293AB /* Pods-DynamoxQuiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DynamoxQuiz.debug.xcconfig"; path = "Target Support Files/Pods-DynamoxQuiz/Pods-DynamoxQuiz.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -230,6 +232,7 @@
 			children = (
 				3630F6772E3AA32E006D9E21 /* Question.swift */,
 				3630F6792E3AA348006D9E21 /* AnswerResult.swift */,
+				365CA75D2E3C050A002F4F30 /* AnswerOption.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -448,6 +451,7 @@
 				3630F6782E3AA32E006D9E21 /* Question.swift in Sources */,
 				3630F66E2E385421006D9E21 /* QuizScreen.swift in Sources */,
 				3630F6732E3854E3006D9E21 /* ResultVC.swift in Sources */,
+				365CA75E2E3C050A002F4F30 /* AnswerOption.swift in Sources */,
 				3630F6752E3854F6006D9E21 /* ResultScreen.swift in Sources */,
 				3630F62A2E32ACC0006D9E21 /* AppDelegate.swift in Sources */,
 				3630F62C2E32ACC0006D9E21 /* SceneDelegate.swift in Sources */,
