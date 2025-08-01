@@ -8,5 +8,5 @@
 import Foundation
 
 struct AnswerResult: Decodable {
-    let isCorrect: Bool
+    let result: Bool
 }

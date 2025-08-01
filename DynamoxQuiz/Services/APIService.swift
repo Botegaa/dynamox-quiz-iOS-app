@@ -6,51 +6,76 @@
 //
 
 import Foundation
+import RxSwift
 
 class APIService {
     private let baseURL = "https://quiz-api-bwi5hjqyaq-uc.a.run.app"
 
-    func fetchQuestion(completion: @escaping (Result<Question, Error>) -> Void) {
-        guard let url = URL(string: "\(baseURL)/question") else { return }
-
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            if let error = error {
-                completion(.failure(error)); return
+    func fetchQuestion() -> Single<Question> {
+        return Single.create { single in
+            guard let url = URL(string: "\(self.baseURL)/question") else {
+                single(.failure(NSError(domain: "URL inválida", code: 0)))
+                return Disposables.create()
             }
 
-            guard let data = data else { return }
+            let task = URLSession.shared.dataTask(with: url) { data, response, error in
+                if let error = error {
+                    single(.failure(error))
+                    return
+                }
 
-            do {
-                let question = try JSONDecoder().decode(Question.self, from: data)
-                completion(.success(question))
-            } catch {
-                completion(.failure(error))
+                guard let data = data else {
+                    single(.failure(NSError(domain: "Sem dados", code: 0)))
+                    return
+                }
+
+                do {
+                    let question = try JSONDecoder().decode(Question.self, from: data)
+                    single(.success(question))
+                } catch {
+                    single(.failure(error))
+                }
             }
-        }.resume()
+
+            task.resume()
+            return Disposables.create { task.cancel() }
+        }
     }
 
-    func submitAnswer(option: String, completion: @escaping (Result<AnswerResult, Error>) -> Void) {
-        guard let url = URL(string: "\(baseURL)/answer") else { return }
-
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        let body = ["option": option]
-        request.httpBody = try? JSONSerialization.data(withJSONObject: body)
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-
-        URLSession.shared.dataTask(with: request) { data, response, error in
-            if let error = error {
-                completion(.failure(error)); return
+    func submitAnswer(questionId: String, answer: String) -> Single<AnswerResult> {
+        return Single.create { single in
+            guard let url = URL(string: "\(self.baseURL)/answer?questionId=\(questionId)") else {
+                single(.failure(NSError(domain: "URL inválida", code: 0)))
+                return Disposables.create()
             }
 
-            guard let data = data else { return }
+            var request = URLRequest(url: url)
+            request.httpMethod = "POST"
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            let body = ["answer": answer]
+            request.httpBody = try? JSONSerialization.data(withJSONObject: body)
 
-            do {
-                let result = try JSONDecoder().decode(AnswerResult.self, from: data)
-                completion(.success(result))
-            } catch {
-                completion(.failure(error))
+            let task = URLSession.shared.dataTask(with: request) { data, response, error in
+                if let error = error {
+                    single(.failure(error))
+                    return
+                }
+
+                guard let data = data else {
+                    single(.failure(NSError(domain: "Sem dados", code: 0)))
+                    return
+                }
+
+                do {
+                    let result = try JSONDecoder().decode(AnswerResult.self, from: data)
+                    single(.success(result))
+                } catch {
+                    single(.failure(error))
+                }
             }
-        }.resume()
+
+            task.resume()
+            return Disposables.create { task.cancel() }
+        }
     }
 }
