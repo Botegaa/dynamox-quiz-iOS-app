@@ -8,7 +8,7 @@ import UIKit
 
 class QuizScreen: UIView {
     
-    let logoImage = UIImageView.appLogo()
+    lazy var logoImage = UIImageView.appLogo()
     
     lazy var questionView : UIView = {
         let view = UIView()

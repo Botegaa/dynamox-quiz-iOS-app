@@ -9,7 +9,7 @@ import SnapKit
 
 class HomeScreen: UIView {
     
-    let logoImage = UIImageView.appLogo()
+    lazy var logoImage = UIImageView.appLogo()
 
     lazy var logoLabel : UILabel = {
         let label = UILabel()
