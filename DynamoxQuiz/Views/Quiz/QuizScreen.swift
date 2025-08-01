@@ -33,6 +33,14 @@ class QuizScreen: UIView {
         label.font = UIFont(name: "Poppins-Regular", size: 16)
         return label
     }()
+    
+    lazy var answersStackView: UIStackView = {
+        let stack = UIStackView()
+        stack.axis = .vertical
+        stack.spacing = 24
+        stack.distribution = .fill
+        return stack
+    }()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -50,6 +58,17 @@ class QuizScreen: UIView {
         addSubview(questionView)
         questionView.addSubview(questionCounterLabel)
         questionView.addSubview(questionLabel)
+        addSubview(answersStackView)
+
+        for option in ["A", "B", "C", "D", "E"] {
+            let answer = AnswerButtonView()
+            answer.button.setTitle("Alternativa \(option)", for: .normal)
+            answer.snp.makeConstraints{ make in
+                make.height.equalTo(53)
+                
+            }
+            answersStackView.addArrangedSubview(answer)
+        }
     }
     
     private func setupContraints(){
@@ -57,6 +76,7 @@ class QuizScreen: UIView {
         questionViewSetupConstraints()
         questionCounterLabelSetupConstraints()
         questionLabelSetupConstraints()
+        answerStackSetupConstraints()
     }
     
     private func logoImgSetupConstraints(){
@@ -73,7 +93,7 @@ class QuizScreen: UIView {
             make.top.equalTo(logoImage.snp.bottom).offset(32)
             make.left.equalTo(41)
             make.right.equalToSuperview().inset(41)
-            make.height.equalTo(170)
+            make.height.equalTo(150)
         }
     }
     
@@ -87,6 +107,15 @@ class QuizScreen: UIView {
     private func questionLabelSetupConstraints(){
         questionLabel.snp.makeConstraints { make in
             make.center.equalToSuperview()
+        }
+    }
+    
+    private func answerStackSetupConstraints(){
+        answersStackView.snp.makeConstraints { make in
+            make.top.equalTo(questionView.snp.bottom).offset(70)
+            make.left.right.equalToSuperview().inset(51)
+            make.right.right.equalToSuperview().inset(51)
+            make.bottom.lessThanOrEqualToSuperview().inset(50)
         }
     }
     
