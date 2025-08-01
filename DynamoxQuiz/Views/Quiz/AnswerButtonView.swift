@@ -23,7 +23,7 @@ import SnapKit
         override init(frame: CGRect) {
             super.init(frame: frame)
             backgroundColor = .white
-            layer.cornerRadius = 12
+            layer.cornerRadius = 8
             layer.borderColor = UIColor.quizMainColor.cgColor
             layer.borderWidth = 2
             addSubview(button)

@@ -14,7 +14,7 @@ class QuizScreen: UIView {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = UIColor.quizMainColor
-        view.layer.cornerRadius = 12
+        view.layer.cornerRadius = 8
         return view
     }()
     

@@ -35,7 +35,7 @@ class HomeScreen: UIView {
         tf.backgroundColor = .backgroundGray
         tf.layer.borderColor = UIColor.quizMainColor.cgColor
         tf.layer.borderWidth = 2
-        tf.layer.cornerRadius = 12
+        tf.layer.cornerRadius = 8
         return tf
     }()
     
@@ -43,7 +43,7 @@ class HomeScreen: UIView {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = UIColor.quizMainColor
-        view.layer.cornerRadius = 12
+        view.layer.cornerRadius = 8
         return view
     }()
     
@@ -121,7 +121,7 @@ class HomeScreen: UIView {
         startBttnView.snp.makeConstraints { make in
             make.top.equalTo(nameTextField.snp.bottom).offset(12)
             make.left.equalTo(nameTextField)
-            make.width.equalTo(299)
+            make.width.equalTo(300)
             make.height.equalTo(53)
         }
     }
