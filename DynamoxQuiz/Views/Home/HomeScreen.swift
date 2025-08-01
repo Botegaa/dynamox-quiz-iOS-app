@@ -82,7 +82,7 @@ class HomeScreen: UIView {
         nameTextFieldLabelSetupConstraints()
         nameTextFieldSetupConstraints()
         startBttnViewSetupConstraints()
-        startBttnConfigConstraints()
+        startBttnSetupConstraints()
     }
     
     private func logoImgSetupConstraints(){
@@ -126,7 +126,7 @@ class HomeScreen: UIView {
         }
     }
     
-    private func startBttnConfigConstraints(){
+    private func startBttnSetupConstraints(){
         startBttn.snp.makeConstraints { make in
             make.center.equalToSuperview()
         }
