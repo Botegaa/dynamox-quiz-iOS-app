@@ -2,46 +2,39 @@
 //  QuizViewModel.swift
 //  DynamoxQuiz
 //
-//  Created by Pedro Botega on 30/07/25.
+//  Created by Pedro Botega on 01/08/25.
 //
 
 import Foundation
+import RxSwift
 
 class QuizViewModel {
-    private let apiService = APIService()
+    private let service = APIService()
+    private let disposeBag = DisposeBag()
 
-    private(set) var currentQuestion: Question?
-    private(set) var score: Int = 0
-    var onUpdate: (() -> Void)?
-    var onFinish: (() -> Void)?
+
+    let question = PublishSubject<Question>()
+    let answerResult = PublishSubject<Bool>()
+    let options = PublishSubject<[String]>()
 
     func loadQuestion() {
-        apiService.fetchQuestion { [weak self] result in
-            switch result {
-            case .success(let question):
-                self?.currentQuestion = question
-                DispatchQueue.main.async {
-                    self?.onUpdate?()
-                }
-            case .failure(let error):
+        service.fetchQuestion()
+            .subscribe(onSuccess: { [weak self] question in
+                self?.question.onNext(question)
+                self?.options.onNext(question.options)
+            }, onFailure: { error in
                 print("Erro ao buscar pergunta:", error)
-            }
-        }
+            })
+            .disposed(by: disposeBag)
     }
 
-    func submitAnswer(_ option: String) {
-        apiService.submitAnswer(option: option) { [weak self] result in
-            switch result {
-            case .success(let answerResult):
-                if answerResult.isCorrect {
-                    self?.score += 1
-                }
-                DispatchQueue.main.async {
-                    self?.loadQuestion() 
-                }
-            case .failure(let error):
+    func submitAnswer(questionId: String, answer: String) {
+        service.submitAnswer(questionId: questionId, answer: answer)
+            .subscribe(onSuccess: { [weak self] response in
+                self?.answerResult.onNext(response.result)
+            }, onFailure: { error in
                 print("Erro ao enviar resposta:", error)
-            }
-        }
+            })
+            .disposed(by: disposeBag)
     }
 }

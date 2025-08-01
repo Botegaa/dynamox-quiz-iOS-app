@@ -8,6 +8,7 @@ import UIKit
 
 class QuizScreen: UIView {
     
+    
     lazy var logoImage = UIImageView.appLogo()
     
     lazy var questionView : UIView = {
@@ -26,13 +27,19 @@ class QuizScreen: UIView {
         return label
     }()
     
+    
     lazy var questionLabel : UILabel = {
         let label = UILabel()
-        label.text = "teste"
+        label.numberOfLines = 3
         label.tintColor = .white
         label.font = UIFont(name: "Poppins-Regular", size: 16)
         return label
     }()
+    
+    func updateQuestion(with question: Question) {
+       questionLabel.text = question.statement
+   }
+    
     
     lazy var answersStackView: UIStackView = {
         let stack = UIStackView()
@@ -47,6 +54,7 @@ class QuizScreen: UIView {
         backgroundColor = .white
         addElements()
         setupContraints()
+        
     }
     
     required init?(coder: NSCoder) {
@@ -70,6 +78,21 @@ class QuizScreen: UIView {
             answersStackView.addArrangedSubview(answer)
         }
     }
+    
+
+    func updateOptions(with options: [String]) {
+        answersStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
+        
+        for option in options {
+            let buttonView = AnswerButtonView()
+            buttonView.button.setTitle(option, for: .normal)
+            buttonView.snp.makeConstraints { make in
+                make.height.equalTo(53)
+            }
+            answersStackView.addArrangedSubview(buttonView)
+        }
+    }
+
     
     private func setupContraints(){
         logoImgSetupConstraints()
@@ -121,3 +144,5 @@ class QuizScreen: UIView {
     
     
 }
+
+
