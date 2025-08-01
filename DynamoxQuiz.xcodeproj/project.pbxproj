@@ -28,6 +28,7 @@
 		365CA75A2E3BFA5D002F4F30 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 365CA7592E3BFA5D002F4F30 /* Poppins-SemiBold.ttf */; };
 		365CA75C2E3BFA6C002F4F30 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 365CA75B2E3BFA6C002F4F30 /* Poppins-Bold.ttf */; };
 		365CA75E2E3C050A002F4F30 /* AnswerOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365CA75D2E3C050A002F4F30 /* AnswerOption.swift */; };
+		365CA7602E3C809A002F4F30 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365CA75F2E3C809A002F4F30 /* UIImageView+Extension.swift */; };
 		EE6F0B54D873D8F0A08AA24D /* Pods_DynamoxQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E8E84027464C2E7DACC527A /* Pods_DynamoxQuiz.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +79,7 @@
 		365CA7592E3BFA5D002F4F30 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		365CA75B2E3BFA6C002F4F30 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		365CA75D2E3C050A002F4F30 /* AnswerOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerOption.swift; sourceTree = "<group>"; };
+		365CA75F2E3C809A002F4F30 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		6E8E84027464C2E7DACC527A /* Pods_DynamoxQuiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DynamoxQuiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFEC786D4D3102E63FA293AB /* Pods-DynamoxQuiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DynamoxQuiz.debug.xcconfig"; path = "Target Support Files/Pods-DynamoxQuiz/Pods-DynamoxQuiz.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -241,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				3630F6822E3B34C7006D9E21 /* ThemeColors.swift */,
+				365CA75F2E3C809A002F4F30 /* UIImageView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 			files = (
 				3630F65A2E32AE4D006D9E21 /* HomeVC.swift in Sources */,
 				3630F6702E385444006D9E21 /* QuizVC.swift in Sources */,
+				365CA7602E3C809A002F4F30 /* UIImageView+Extension.swift in Sources */,
 				3630F67A2E3AA348006D9E21 /* AnswerResult.swift in Sources */,
 				3630F66B2E385405006D9E21 /* HomeScreen.swift in Sources */,
 				3630F6802E3AB01E006D9E21 /* APIService.swift in Sources */,

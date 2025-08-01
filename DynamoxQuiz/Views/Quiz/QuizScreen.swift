@@ -8,6 +8,8 @@
 import UIKit
 
 class QuizScreen: UIView {
+    
+    let logoImage = UIImageView.appLogo()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -16,5 +18,7 @@ class QuizScreen: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    
     
 }

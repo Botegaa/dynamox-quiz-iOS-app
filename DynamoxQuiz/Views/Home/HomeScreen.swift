@@ -9,13 +9,8 @@ import SnapKit
 
 class HomeScreen: UIView {
     
-    lazy var logoImage : UIImageView = {
-        let img = UIImageView()
-        img.translatesAutoresizingMaskIntoConstraints = false
-        img.image = UIImage(named: "Logo")
-        return img
-    }()
-    
+    let logoImage = UIImageView.appLogo()
+
     lazy var logoLabel : UILabel = {
         let label = UILabel()
         label.text = "Dynamox Quiz"
