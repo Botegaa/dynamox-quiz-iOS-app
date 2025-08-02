@@ -8,15 +8,11 @@
 import UIKit
 import SnapKit
 
-var onTap: (() -> Void)?
-
-
-
-
-
 
     final class AnswerButtonView: UIView {
 
+        var onTap: (() -> Void)?
+        
         let button: UIButton = {
             let btn = UIButton()
             btn.setTitle("Alternativa", for: .normal)

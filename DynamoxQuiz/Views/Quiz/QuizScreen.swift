@@ -80,15 +80,25 @@ class QuizScreen: UIView {
     }
     
 
-    func updateOptions(with options: [String]) {
+    func updateOptions(
+        with options: [String],
+        questionId: String,
+        submitAction: @escaping (String) -> Void
+    ) {
         answersStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
-        
+
         for option in options {
             let buttonView = AnswerButtonView()
             buttonView.button.setTitle(option, for: .normal)
+
+            buttonView.onTap = {
+                submitAction(option)
+            }
+
             buttonView.snp.makeConstraints { make in
                 make.height.equalTo(53)
             }
+
             answersStackView.addArrangedSubview(buttonView)
         }
     }
