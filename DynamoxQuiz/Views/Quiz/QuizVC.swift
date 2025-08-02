@@ -30,6 +30,11 @@ class QuizVC: UIViewController {
             .subscribe(onNext: { [weak self] question in
                 self?.currentQuestion = question
                 self?.quizScreen.updateQuestion(with: question)
+
+                self?.quizScreen.updateQuestionCounter(
+                    current: self?.viewModel.questionCount ?? 0,
+                    total: self?.viewModel.maxQuestions ?? 10
+                )
             })
             .disposed(by: disposeBag)
         
@@ -66,6 +71,14 @@ class QuizVC: UIViewController {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                     self.viewModel.loadQuestion()
                 }
+            })
+            .disposed(by: disposeBag)
+        
+        viewModel.quizFinished
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] in
+                let resultVC = ResultVC()
+                self?.navigationController?.pushViewController(resultVC, animated: true)
             })
             .disposed(by: disposeBag)
 

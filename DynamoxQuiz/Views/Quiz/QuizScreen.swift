@@ -8,7 +8,7 @@ import UIKit
 
 class QuizScreen: UIView {
     
-    
+    let viewModel = QuizViewModel()
     lazy var logoImage = UIImageView.appLogo()
     
     lazy var questionView : UIView = {
@@ -21,12 +21,15 @@ class QuizScreen: UIView {
     
     lazy var questionCounterLabel : UILabel = {
         let label = UILabel()
-        label.text = "7/10"
+        label.text = "0/10"
         label.tintColor = .white
         label.font = UIFont(name: "Poppins-Medium", size: 16)
         return label
     }()
     
+    func updateQuestionCounter(current: Int, total: Int) {
+        questionCounterLabel.text = "\(current)/10"
+    }
     
     lazy var questionLabel : UILabel = {
         let label = UILabel()
@@ -112,7 +115,7 @@ class QuizScreen: UIView {
                 buttonView.button.backgroundColor = .systemGreen
             } else if title == selectedAnswer {
                 buttonView.button.backgroundColor = .systemRed
-            } 
+            }
 
             buttonView.button.isUserInteractionEnabled = false
         }

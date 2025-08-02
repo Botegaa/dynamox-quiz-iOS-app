@@ -15,13 +15,22 @@ class QuizViewModel {
     let question = PublishSubject<Question>()
     let answerResult = PublishSubject<Bool>()
     let options = PublishSubject<[String]>()
+    var questionCount = 0
+    let maxQuestions = 10
+    let quizFinished = PublishSubject<Void>()
 
     func loadQuestion() {
+        guard questionCount < maxQuestions else {
+            quizFinished.onNext(())
+            return
+        }
+
         service.fetchQuestion()
             .subscribe(onSuccess: { [weak self] question in
+                self?.currentQuestion = question
                 self?.question.onNext(question)
                 self?.options.onNext(question.options)
-                self?.currentQuestion = question
+                self?.questionCount += 1
             }, onFailure: { error in
                 print("Erro ao buscar pergunta:", error)
             })
