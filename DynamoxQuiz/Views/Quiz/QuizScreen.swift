@@ -102,6 +102,22 @@ class QuizScreen: UIView {
             answersStackView.addArrangedSubview(buttonView)
         }
     }
+    
+    func highlightButtons(selectedAnswer: String, correctAnswer: String, isCorrect: Bool) {
+        for view in answersStackView.arrangedSubviews {
+            guard let buttonView = view as? AnswerButtonView else { continue }
+            let title = buttonView.button.title(for: .normal)
+
+            if title == correctAnswer {
+                buttonView.button.backgroundColor = .systemGreen
+            } else if title == selectedAnswer {
+                buttonView.button.backgroundColor = .systemRed
+            } 
+
+            buttonView.button.isUserInteractionEnabled = false
+        }
+    }
+
 
     
     private func setupContraints(){

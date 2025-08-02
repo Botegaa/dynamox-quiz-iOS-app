@@ -11,8 +11,7 @@ import RxSwift
 class QuizViewModel {
     private let service = APIService()
     private let disposeBag = DisposeBag()
-
-
+    var currentQuestion: Question?
     let question = PublishSubject<Question>()
     let answerResult = PublishSubject<Bool>()
     let options = PublishSubject<[String]>()
@@ -22,6 +21,7 @@ class QuizViewModel {
             .subscribe(onSuccess: { [weak self] question in
                 self?.question.onNext(question)
                 self?.options.onNext(question.options)
+                self?.currentQuestion = question
             }, onFailure: { error in
                 print("Erro ao buscar pergunta:", error)
             })
