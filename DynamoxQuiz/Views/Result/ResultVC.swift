@@ -27,13 +27,25 @@ class ResultVC: UIViewController {
         resultScreen = ResultScreen()
         view = resultScreen
         resultScreen?.configureResults(correct: correctAnswers, wrong: wrongAnswers, total: correctAnswers + wrongAnswers)
+        resultScreen?.updatePointsCounter(correct: correctAnswers)
+        resultScreen?.restartBttn.addTarget(self, action: #selector(restartQuizTapped), for: .touchUpInside)
+        resultScreen?.goToHomeBttn.addTarget(self, action: #selector(goToHomeTapped), for: .touchUpInside)
 
 
 
     }
         private let correctAnswers: Int
         private let wrongAnswers: Int
+    
+    @objc private func restartQuizTapped() {
+        let quizVC = QuizVC()
+        navigationController?.setViewControllers([quizVC], animated: true)
+    }
 
+    @objc private func goToHomeTapped() {
+        let homeVC = HomeVC()
+        navigationController?.setViewControllers([homeVC], animated: true)
+    }
        
         
         

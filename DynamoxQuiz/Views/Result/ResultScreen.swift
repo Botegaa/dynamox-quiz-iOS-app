@@ -38,13 +38,18 @@ class ResultScreen: UIView {
         return label
     }()
     
-    lazy var pointsCounterLabel : UILabel = {
+    lazy var pointsCounterLabel  : UILabel = {
         let label = UILabel()
-        label.text = "Você fez 80 pontos."
+        label.text = "Você fez pontos."
         label.tintColor = .white
         label.font = UIFont(name: "Poppins-Regular", size: 16)
         return label
     }()
+    
+    func updatePointsCounter(correct: Int) {
+        pointsCounterLabel.text =  "Você fez +\(correct * 10) pontos."
+    }
+    
     
     
     private func makeResultColumn(title: String, subtitle: String, titleColor: UIColor) -> UIView {
