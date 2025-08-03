@@ -42,6 +42,10 @@ class QuizViewModel {
     func submitAnswer(questionId: String, answer: String) {
         service.submitAnswer(questionId: questionId, answer: answer)
             .subscribe(onSuccess: { [weak self] response in
+                print("• ID da pergunta: \(questionId)")
+                         print("• Resposta marcada: \(answer)")
+                         print("• Resultado: \(response.result ? " CORRETA" : "ERRADA")")
+                         print("–––––––––––––––––––––––––––––––")
                 if response.result {
                     self?.correctCount += 1
                 } else {
@@ -52,5 +56,7 @@ class QuizViewModel {
                 print("Erro ao enviar resposta:", error)
             })
             .disposed(by: disposeBag)
+        
+        
     }
 }

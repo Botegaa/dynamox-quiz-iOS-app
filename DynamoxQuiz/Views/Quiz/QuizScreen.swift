@@ -33,7 +33,8 @@ class QuizScreen: UIView {
     
     lazy var questionLabel : UILabel = {
         let label = UILabel()
-        label.numberOfLines = 3
+        label.numberOfLines = 5
+        label.textAlignment = .center
         label.tintColor = .white
         label.font = UIFont(name: "Poppins-Regular", size: 16)
         return label
@@ -75,7 +76,7 @@ class QuizScreen: UIView {
             let answer = AnswerButtonView()
             answer.button.setTitle("Alternativa \(option)", for: .normal)
             answer.snp.makeConstraints{ make in
-                make.height.equalTo(53)
+                make.height.equalTo(65)
                 
             }
             answersStackView.addArrangedSubview(answer)
@@ -93,31 +94,31 @@ class QuizScreen: UIView {
         for option in options {
             let buttonView = AnswerButtonView()
             buttonView.button.setTitle(option, for: .normal)
+            buttonView.button.titleLabel?.textAlignment = .center
+            buttonView.button.titleLabel?.font = UIFont(name: "Poppins-Regular", size: 12)
+            buttonView.button.titleLabel?.numberOfLines = 4
 
             buttonView.onTap = {
                 submitAction(option)
             }
 
             buttonView.snp.makeConstraints { make in
-                make.height.equalTo(53)
+                make.height.equalTo(65)
             }
 
             answersStackView.addArrangedSubview(buttonView)
         }
     }
     
-    func highlightButtons(selectedAnswer: String, correctAnswer: String, isCorrect: Bool) {
-        for view in answersStackView.arrangedSubviews {
-            guard let buttonView = view as? AnswerButtonView else { continue }
-            let title = buttonView.button.title(for: .normal)
+    func highlightButtons(selectedAnswer: String, isCorrect: Bool) {
+        for case let answerView as AnswerButtonView in answersStackView.arrangedSubviews {
+            guard let title = answerView.button.title(for: .normal) else { continue }
 
-            if title == correctAnswer {
-                buttonView.button.backgroundColor = .systemGreen
-            } else if title == selectedAnswer {
-                buttonView.button.backgroundColor = .systemRed
+            if title == selectedAnswer {
+                answerView.backgroundColor = isCorrect ? .systemGreen : .systemRed
+            } else {
+                answerView.backgroundColor = .clear
             }
-
-            buttonView.button.isUserInteractionEnabled = false
         }
     }
 
@@ -143,30 +144,34 @@ class QuizScreen: UIView {
     private func questionViewSetupConstraints(){
         questionView.snp.makeConstraints { make in
             make.top.equalTo(logoImage.snp.bottom).offset(32)
-            make.left.equalTo(41)
-            make.right.equalToSuperview().inset(41)
+            make.left.equalTo(24)
+            make.right.equalToSuperview().inset(24)
             make.height.equalTo(150)
         }
     }
     
     private func questionCounterLabelSetupConstraints(){
         questionCounterLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(16)
+            make.top.equalToSuperview().offset(7)
             make.centerX.equalToSuperview()
         }
     }
     
     private func questionLabelSetupConstraints(){
         questionLabel.snp.makeConstraints { make in
-            make.center.equalToSuperview()
+            make.top.equalTo(questionCounterLabel.snp.bottom).offset(3)
+            make.right.equalToSuperview().inset(5)
+            make.left.equalToSuperview().offset(5)
+            make.bottom.equalToSuperview().offset(5)
+        
         }
     }
     
     private func answerStackSetupConstraints(){
         answersStackView.snp.makeConstraints { make in
-            make.top.equalTo(questionView.snp.bottom).offset(70)
-            make.left.right.equalToSuperview().inset(51)
-            make.right.right.equalToSuperview().inset(51)
+            make.top.equalTo(questionView.snp.bottom).offset(30)
+            make.left.right.equalToSuperview().inset(30)
+            make.right.right.equalToSuperview().inset(30)
             make.bottom.lessThanOrEqualToSuperview().inset(50)
         }
     }

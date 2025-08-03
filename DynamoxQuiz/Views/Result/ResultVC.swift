@@ -8,13 +8,17 @@
 import UIKit
 import RxSwift
 
-var resultScreen : ResultScreen?
-
 class ResultVC: UIViewController {
-    
-    init(correctAnswers: Int, wrongAnswers: Int) {
+
+    private let userName: String
+    private let correctAnswers: Int
+    private let wrongAnswers: Int
+    private let resultScreen = ResultScreen()
+
+    init(correctAnswers: Int, wrongAnswers: Int, userName: String) {
         self.correctAnswers = correctAnswers
         self.wrongAnswers = wrongAnswers
+        self.userName = userName
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -22,23 +26,32 @@ class ResultVC: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
+    override func loadView() {
+        self.view = resultScreen
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        resultScreen = ResultScreen()
-        view = resultScreen
-        resultScreen?.configureResults(correct: correctAnswers, wrong: wrongAnswers, total: correctAnswers + wrongAnswers)
-        resultScreen?.updatePointsCounter(correct: correctAnswers)
-        resultScreen?.restartBttn.addTarget(self, action: #selector(restartQuizTapped), for: .touchUpInside)
-        resultScreen?.goToHomeBttn.addTarget(self, action: #selector(goToHomeTapped), for: .touchUpInside)
 
+        resultScreen.configureResults(
+            correct: correctAnswers,
+            wrong: wrongAnswers,
+            total: correctAnswers + wrongAnswers
+        )
 
+        resultScreen.updatePointsCounter(correct: correctAnswers)
+        resultScreen.congratsLabel.text = "Parabéns, \(userName)"
 
+        resultScreen.restartBttn.addTarget(self, action: #selector(restartQuizTapped), for: .touchUpInside)
+        resultScreen.goToHomeBttn.addTarget(self, action: #selector(goToHomeTapped), for: .touchUpInside)
+
+        navigationItem.hidesBackButton = true
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+        navigationController?.interactivePopGestureRecognizer?.delegate = nil
     }
-        private let correctAnswers: Int
-        private let wrongAnswers: Int
-    
+
     @objc private func restartQuizTapped() {
-        let quizVC = QuizVC()
+        let quizVC = QuizVC(userName: userName)
         navigationController?.setViewControllers([quizVC], animated: true)
     }
 
@@ -46,12 +59,7 @@ class ResultVC: UIViewController {
         let homeVC = HomeVC()
         navigationController?.setViewControllers([homeVC], animated: true)
     }
-       
-        
-        
-
-    }
-
+}
     
 
 

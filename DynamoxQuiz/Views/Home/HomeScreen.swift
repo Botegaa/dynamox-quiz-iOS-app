@@ -33,6 +33,7 @@ class HomeScreen: UIView {
     lazy var nameTextField : UITextField = {
         let tf = UITextField ()
         tf.backgroundColor = .backgroundGray
+        tf.textColor = UIColor.quizMainColor
         tf.layer.borderColor = UIColor.quizMainColor.cgColor
         tf.layer.borderWidth = 2
         tf.layer.cornerRadius = 8

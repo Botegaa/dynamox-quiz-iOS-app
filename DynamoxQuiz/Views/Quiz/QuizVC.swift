@@ -18,13 +18,25 @@ class QuizVC: UIViewController {
     private let quizScreen = QuizScreen()
     private var currentQuestion: Question?
     private var selectedAnswer: String?
+    private let userName: String
+
+        init(userName: String) {
+            self.userName = userName
+            super.init(nibName: nil, bundle: nil)
+        }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
  
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view = quizScreen
-        
+        navigationItem.hidesBackButton = true
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+           self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
         viewModel.question
             .observe(on: MainScheduler.instance)
             .subscribe(onNext: { [weak self] question in
@@ -64,7 +76,7 @@ class QuizVC: UIViewController {
 
                 self.quizScreen.highlightButtons(
                     selectedAnswer: selected,
-                    correctAnswer: correct,
+                   
                     isCorrect: isCorrect
                 )
 
@@ -81,7 +93,8 @@ class QuizVC: UIViewController {
 
                 let resultVC = ResultVC(
                     correctAnswers: viewModel.correctCount,
-                    wrongAnswers: viewModel.wrongCount
+                    wrongAnswers: viewModel.wrongCount,
+                    userName: userName
                 )
                 self.navigationController?.pushViewController(resultVC, animated: true)
             })

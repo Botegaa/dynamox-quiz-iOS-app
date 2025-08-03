@@ -17,6 +17,11 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         view = homeScreen
         setupActions()
+        navigationItem.hidesBackButton = true
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
+        let userName = homeScreen.nameTextField.text ?? ""
+        
     }
     
     private func setupActions() {
@@ -29,7 +34,8 @@ class HomeVC: UIViewController {
         if name.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
             showAlertEmptyName()
         } else {
-            let quizVC = QuizVC()
+            let userName = homeScreen.nameTextField.text ?? ""
+            let quizVC = QuizVC(userName: userName)
             navigationController?.pushViewController(quizVC, animated: false)
         }
     }
