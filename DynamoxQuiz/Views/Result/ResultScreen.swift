@@ -9,6 +9,10 @@ import UIKit
 
 class ResultScreen: UIView {
 
+    lazy var questionsLabel = UILabel()
+    lazy var correctLabel = UILabel()
+    lazy var wrongLabel = UILabel()
+    
     lazy var logoImage = UIImageView.appLogo()
     
     lazy var trophyImage : UIImageView = {
@@ -70,15 +74,6 @@ class ResultScreen: UIView {
         return container
     }
     
-    private func makeDivider() -> UIView {
-        let line = UIView()
-        line.backgroundColor = .gray
-        line.snp.makeConstraints { make in
-            make.width.lessThanOrEqualTo(1)
-            make.height.equalTo(65)
-        }
-        return line
-    }
     
     lazy var resultsStackView: UIStackView = {
         let stack = UIStackView(arrangedSubviews: [
@@ -91,6 +86,14 @@ class ResultScreen: UIView {
         stack.spacing = 0
         return stack
     }()
+    
+    func configureResults(correct: Int, wrong: Int, total: Int) {
+        resultsStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
+
+        resultsStackView.addArrangedSubview(makeResultColumn(title: "\(total)", subtitle: "perguntas", titleColor: .white))
+        resultsStackView.addArrangedSubview(makeResultColumn(title: "\(correct)", subtitle: "corretas", titleColor: .green))
+        resultsStackView.addArrangedSubview(makeResultColumn(title: "\(wrong)", subtitle: "erradas", titleColor: .red))
+    }
     
     lazy var restartBttnView: UIView = {
         let view = UIView()

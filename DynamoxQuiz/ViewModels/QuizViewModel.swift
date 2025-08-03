@@ -17,6 +17,8 @@ class QuizViewModel {
     let options = PublishSubject<[String]>()
     var questionCount = 0
     let maxQuestions = 10
+    var correctCount = 0
+    var wrongCount = 0
     let quizFinished = PublishSubject<Void>()
 
     func loadQuestion() {
@@ -40,6 +42,11 @@ class QuizViewModel {
     func submitAnswer(questionId: String, answer: String) {
         service.submitAnswer(questionId: questionId, answer: answer)
             .subscribe(onSuccess: { [weak self] response in
+                if response.result {
+                    self?.correctCount += 1
+                } else {
+                    self?.wrongCount += 1
+                }
                 self?.answerResult.onNext(response.result)
             }, onFailure: { error in
                 print("Erro ao enviar resposta:", error)

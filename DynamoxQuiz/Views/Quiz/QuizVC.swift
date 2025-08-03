@@ -68,7 +68,7 @@ class QuizVC: UIViewController {
                     isCorrect: isCorrect
                 )
 
-                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                     self.viewModel.loadQuestion()
                 }
             })
@@ -77,8 +77,13 @@ class QuizVC: UIViewController {
         viewModel.quizFinished
             .observe(on: MainScheduler.instance)
             .subscribe(onNext: { [weak self] in
-                let resultVC = ResultVC()
-                self?.navigationController?.pushViewController(resultVC, animated: true)
+                guard let self = self else { return }
+
+                let resultVC = ResultVC(
+                    correctAnswers: viewModel.correctCount,
+                    wrongAnswers: viewModel.wrongCount
+                )
+                self.navigationController?.pushViewController(resultVC, animated: true)
             })
             .disposed(by: disposeBag)
 
