@@ -32,7 +32,7 @@ O projeto foi gerenciado usando o **GitHub Projects**, com organização das tar
 ## Como rodar
 
 ```bash
-git clone https://github.com/seu-usuario/DynamoxQuiz.git
+git clone https://github.com/botegaa/DynamoxQuiz.git
 cd DynamoxQuiz
 pod install
 open DynamoxQuiz.xcworkspace
