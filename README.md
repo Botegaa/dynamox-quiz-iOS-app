@@ -21,7 +21,7 @@ Um app de quiz interativo desenvolvido como parte de um desafio técnico para a 
 
 ## Protótipo no Figma
 
-[Figma do projeto]([https://www.figma.com/file/SEU-LINK-AQUI](https://www.figma.com/design/LdxIthiJpAurwih51Bfw3C/DynamoxQuizAPP?node-id=0-1&p=f&t=C7Rp6idoYCKncBQA-0))  
+[Figma do projeto](https://www.figma.com/design/LdxIthiJpAurwih51Bfw3C/DynamoxQuizAPP?node-id=0-1&p=f&t=C7Rp6idoYCKncBQA-0) 
 
 ##  Metodologia
 
