@@ -3,7 +3,6 @@ platform :ios, '17.2'
 target 'DynamoxQuiz' do
   use_frameworks!
 
-  pod 'RealmSwift', '~> 10.44.0'
   pod 'RxSwift', '~> 6.5'
   pod 'RxCocoa', '~> 6.5'
   pod 'SnapKit', '~> 5.6'

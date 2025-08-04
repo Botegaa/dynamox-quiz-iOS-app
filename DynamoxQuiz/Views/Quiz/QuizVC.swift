@@ -19,6 +19,7 @@ class QuizVC: UIViewController {
     private var currentQuestion: Question?
     private var selectedAnswer: String?
     private let userName: String
+    private var didAnswerCurrentQuestion = false
 
         init(userName: String) {
             self.userName = userName
@@ -29,6 +30,10 @@ class QuizVC: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
  
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        viewModel.loadQuestion()
+    }
     
     
     override func viewDidLoad() {
@@ -40,6 +45,7 @@ class QuizVC: UIViewController {
         viewModel.question
             .observe(on: MainScheduler.instance)
             .subscribe(onNext: { [weak self] question in
+                self?.didAnswerCurrentQuestion = false
                 self?.currentQuestion = question
                 self?.quizScreen.updateQuestion(with: question)
 
@@ -60,6 +66,8 @@ class QuizVC: UIViewController {
                     with: options,
                     questionId: questionId,
                     submitAction: { selected in
+                        guard self.didAnswerCurrentQuestion == false else { return }
+                        self.didAnswerCurrentQuestion = true
                         self.selectedAnswer = selected
                         self.viewModel.submitAnswer(questionId: questionId, answer: selected)
                     }
@@ -111,7 +119,6 @@ class QuizVC: UIViewController {
             present(alert, animated: true)
         }
         
-        viewModel.loadQuestion()
     }
     
     

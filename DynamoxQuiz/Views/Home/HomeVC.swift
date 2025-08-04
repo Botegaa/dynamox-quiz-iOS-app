@@ -8,10 +8,12 @@
 import UIKit
 
 
-var homeScreen = HomeScreen()
 
 
 class HomeVC: UIViewController {
+    
+    var homeScreen = HomeScreen()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +23,7 @@ class HomeVC: UIViewController {
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
         let userName = homeScreen.nameTextField.text ?? ""
-        
+        setupDismissKeyboardGesture()
     }
     
     private func setupActions() {
@@ -44,9 +46,22 @@ class HomeVC: UIViewController {
         let alert = UIAlertController(title: "Nome obrigatório", message: "Por favor, digite seu nome para começar o quiz.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default))
         present(alert, animated: true)
+        
+        
+    }
+    
+    private func setupDismissKeyboardGesture() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+
+    @objc private func dismissKeyboard() {
+        view.endEditing(true)
     }
 }
-    
+
+
     
 
 

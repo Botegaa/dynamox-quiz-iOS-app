@@ -104,7 +104,7 @@ class HomeScreen: UIView {
     
     private func nameTextFieldLabelSetupConstraints(){
            nameTextFieldLabel.snp.makeConstraints { make in
-               make.top.equalToSuperview().offset(368)
+               make.top.equalToSuperview().offset(350)
                make.left.equalTo(nameTextField)
            }
        }

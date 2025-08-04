@@ -10,9 +10,6 @@
 		3630F62A2E32ACC0006D9E21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3630F6292E32ACC0006D9E21 /* AppDelegate.swift */; };
 		3630F62C2E32ACC0006D9E21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3630F62B2E32ACC0006D9E21 /* SceneDelegate.swift */; };
 		3630F6362E32ACC3006D9E21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3630F6342E32ACC3006D9E21 /* LaunchScreen.storyboard */; };
-		3630F6412E32ACC3006D9E21 /* DynamoxQuizTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3630F6402E32ACC3006D9E21 /* DynamoxQuizTests.swift */; };
-		3630F64B2E32ACC4006D9E21 /* DynamoxQuizUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3630F64A2E32ACC4006D9E21 /* DynamoxQuizUITests.swift */; };
-		3630F64D2E32ACC4006D9E21 /* DynamoxQuizUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3630F64C2E32ACC4006D9E21 /* DynamoxQuizUITestsLaunchTests.swift */; };
 		3630F65A2E32AE4D006D9E21 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3630F6592E32AE4D006D9E21 /* HomeVC.swift */; };
 		3630F6692E384C58006D9E21 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 3630F6682E384C58006D9E21 /* .gitignore */; };
 		3630F66B2E385405006D9E21 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3630F66A2E385405006D9E21 /* HomeScreen.swift */; };
@@ -61,10 +58,7 @@
 		3630F6352E32ACC3006D9E21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3630F6372E32ACC3006D9E21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3630F63C2E32ACC3006D9E21 /* DynamoxQuizTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DynamoxQuizTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3630F6402E32ACC3006D9E21 /* DynamoxQuizTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamoxQuizTests.swift; sourceTree = "<group>"; };
 		3630F6462E32ACC4006D9E21 /* DynamoxQuizUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DynamoxQuizUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3630F64A2E32ACC4006D9E21 /* DynamoxQuizUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamoxQuizUITests.swift; sourceTree = "<group>"; };
-		3630F64C2E32ACC4006D9E21 /* DynamoxQuizUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamoxQuizUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3630F6592E32AE4D006D9E21 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		3630F6682E384C58006D9E21 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		3630F66A2E385405006D9E21 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
@@ -122,8 +116,6 @@
 			isa = PBXGroup;
 			children = (
 				3630F6282E32ACC0006D9E21 /* DynamoxQuiz */,
-				3630F63F2E32ACC3006D9E21 /* DynamoxQuizTests */,
-				3630F6492E32ACC4006D9E21 /* DynamoxQuizUITests */,
 				3630F6272E32ACC0006D9E21 /* Products */,
 				373FF59ABF195C78C9E19006 /* Pods */,
 				3630F6682E384C58006D9E21 /* .gitignore */,
@@ -156,23 +148,6 @@
 				3630F6372E32ACC3006D9E21 /* Info.plist */,
 			);
 			path = DynamoxQuiz;
-			sourceTree = "<group>";
-		};
-		3630F63F2E32ACC3006D9E21 /* DynamoxQuizTests */ = {
-			isa = PBXGroup;
-			children = (
-				3630F6402E32ACC3006D9E21 /* DynamoxQuizTests.swift */,
-			);
-			path = DynamoxQuizTests;
-			sourceTree = "<group>";
-		};
-		3630F6492E32ACC4006D9E21 /* DynamoxQuizUITests */ = {
-			isa = PBXGroup;
-			children = (
-				3630F64A2E32ACC4006D9E21 /* DynamoxQuizUITests.swift */,
-				3630F64C2E32ACC4006D9E21 /* DynamoxQuizUITestsLaunchTests.swift */,
-			);
-			path = DynamoxQuizUITests;
 			sourceTree = "<group>";
 		};
 		3630F6602E32B563006D9E21 /* Views */ = {
@@ -482,7 +457,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3630F6412E32ACC3006D9E21 /* DynamoxQuizTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,8 +464,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3630F64D2E32ACC4006D9E21 /* DynamoxQuizUITestsLaunchTests.swift in Sources */,
-				3630F64B2E32ACC4006D9E21 /* DynamoxQuizUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
